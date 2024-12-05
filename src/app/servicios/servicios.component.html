@@ -1,0 +1,13 @@
+<div class="servicios-container">
+    <h2>Servicios que ofrecemos</h2>
+  
+    <div class="row">
+      <div class="col-4" *ngFor="let servicio of servicios">
+        <div class="servicio-card">
+          <h3>{{ servicio.nombre }}</h3> 
+          <p>{{ servicio.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

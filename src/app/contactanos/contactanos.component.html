@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- Formulario de contacto (lo que ya tienes) -->
+  
+    <!-- Aquí va la lista de técnicos -->
+    <div class="row pt-5">
+      <h2 class="text-center">Nuestros Técnicos</h2>
+      <div class="col-md-4" *ngFor="let tecnico of tecnicos">
+        <div class="card" style="width: 18rem;">
+          <img [src]="tecnico.imagen" class="card-img-top" alt="{{ tecnico.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ tecnico.nombre }}</h5>
+            <p class="card-text text-center">{{ tecnico.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
