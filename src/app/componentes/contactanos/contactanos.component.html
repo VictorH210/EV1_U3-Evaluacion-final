@@ -43,6 +43,28 @@
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
+
+                <!-- Nueva sección de Técnicos del servicio técnico -->
+                <div class="col-md-12 pt-5">
+                    <h2 class="text-center">Profesionales del Servicio Técnico</h2>
+                    <div *ngIf="tecnicos.length > 0">
+                        <div class="row">
+                            <div class="col-md-4" *ngFor="let tecnico of tecnicos">
+                                <div class="card mb-4">
+                                    <img [src]="tecnico.foto" alt="{{ tecnico.nombre }}" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ tecnico.nombre }}</h5>
+                                        <p class="card-text">Especialidad: {{ tecnico.especialidad }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="tecnicos.length === 0">
+                        <p class="text-center">No hay técnicos disponibles en este momento.</p>
+                    </div>
+                </div>
+
                 <div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
                     <div class="card-body">
                         <p class="card-text h4 b text-primary">
